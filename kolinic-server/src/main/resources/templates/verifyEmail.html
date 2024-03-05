@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <title>Email verification</title>
+    <link th:href="@{/css/verifyEmail.css}" rel="stylesheet" />
+</head>
+<body>
+	<div class="container">
+		<img th:src="@{/img/logo.jpg}" alt="logo" />
+    	<h2 th:text="${notify}"></h2>
+    	<a th:href="${resendUrl}" th:text="${resendText}"></a>
+	</div>
+</body>
+</html>

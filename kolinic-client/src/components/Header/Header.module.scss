@@ -1,0 +1,292 @@
+@import "../.././util/variables.scss";
+
+.header-top-area {
+    padding: 25px 0 75px;
+
+    .header-icon {
+        width: 50px;
+        height: 50px;
+
+        @include breakpoint(xl) {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .header-button {
+        .header-button-text {
+            color: var(--main-color);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        &:hover {
+            background-color: var(--main-color);
+            transition: all .5s;
+
+            .header-button-text {
+                color: #ffff;
+                transition: all .5s;
+            }
+        }
+    }
+}
+
+.header-bottom {
+    margin-top: -50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9;
+
+    .menu-area {
+        background-color: var(--main-color);
+        padding: 22px 35px;
+
+        ul {
+            .menu-item {
+                position: relative;
+                color: #ffff;
+                display: block;
+
+                a {
+                    display: inline-block;
+                    font-size: 16px;
+                    font-weight: 700;
+                    transition: all .3s;
+
+                    &:hover {
+                        color: var(--main-color-hover);
+                    }
+                }
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    z-index: 1;
+                    background: rgba(255, 255, 255, 0.6);
+                    height: 2px;
+                    width: 0;
+                    top: 100%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: all .2s;
+                }
+
+                &:hover::before {
+                    visibility: visible;
+                    opacity: 1;
+                    width: 100%;
+                }
+
+
+                .submenu {
+                    position: absolute;
+                    min-width: 200px;
+                    top: 140%;
+                    left: 0;
+                    background: #000;
+                    z-index: 2;
+                    visibility: hidden;
+                    opacity: 0;
+                    border-bottom: 2px solid var(--main-color);
+                    box-shadow: 0 0 27px rgba(30, 90, 215, 0.2);
+                    transition: all .3s;
+
+                    &.submenu-user {
+                        left: -150px !important;
+                    }
+
+                    .submenu-item {
+                        color: #fff;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        font-size: 16px;
+                        font-weight: 600;
+                        padding: 10px 20px;
+                        transition: all .3s;
+
+                        &:hover {
+                            color: var(--main-color);
+                        }
+
+                        border-bottom: 1px dashed rgba(30, 90, 215, 0.4);
+                    }
+                }
+
+                &:hover>.submenu {
+                    visibility: visible;
+                    opacity: 1;
+                    top: 100%;
+                }
+            }
+        }
+    }
+}
+
+.navigation-area {
+    background: none;
+    z-index: 555;
+    position: absolute;
+    top: -200%;
+    left: 0;
+    width: 100%;
+    transition: all .5s;
+    visibility: hidden;
+    opacity: 0;
+
+    &.shrinkheader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 998;
+        background: #fff;
+        padding: 5px 0px;
+        box-shadow: 1px 25px 32px rgba(0, 0, 0, 0.1);
+        visibility: visible;
+        opacity: 1;
+        top: 0;
+        transition: all .4s;
+    }
+
+    ul {
+        .menu-item {
+            position: relative;
+            padding: 0 20px;
+
+            @include breakpoint(md) {
+                border-bottom-width: 2px;
+                margin: 0 40px;
+                flex-direction: column;
+            }
+
+            a {
+                text-align: center;
+                display: inline-block;
+                font-size: 16px;
+                font-weight: 700;
+                transition: all .3s;
+
+                &:hover {
+                    color: var(--main-color-hover);
+                }
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                z-index: 1;
+                background: var(--main-color-hover);
+                height: 2px;
+                width: 0;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                visibility: hidden;
+                opacity: 0;
+                transition: all .2s;
+            }
+
+            &:hover::before {
+                visibility: visible;
+                opacity: 1;
+                width: 100%;
+            }
+
+
+            .submenu {
+                position: absolute;
+                width: 170px;
+                top: 140%;
+                left: 0;
+                background: #ffff;
+                z-index: 2;
+                visibility: hidden;
+                opacity: 0;
+                border-bottom: 2px solid var(--main-color);
+                box-shadow: 0 0 27px rgba(30, 90, 215, 0.2);
+                transition: all .3s;
+
+                &.submenu-user {
+                    left: -100px !important;
+                }
+
+                .submenu-item {
+                    color: #000;
+                    width: 100%;
+                    display: inline-block;
+                    font-size: 16px;
+                    font-weight: 600;
+                    padding: 10px 20px;
+                    transition: all .3s;
+
+                    &:hover {
+                        color: var(--main-color);
+                    }
+
+                    border-bottom: 1px dashed rgba(30, 90, 215, 0.4);
+                }
+            }
+
+            .submenu-mobile {
+                display: flex;
+                flex-direction: column;
+                visibility: hidden;
+                opacity: 0;
+
+                @include breakpoint(md) {
+                    visibility: visible;
+                    opacity: 1;
+
+                    .submenu-item {
+                        a {
+                            color: #000;
+                            width: 100%;
+                            display: inline-block;
+                            font-size: 16px;
+                            font-weight: 600;
+                            padding: 10px 20px;
+                            transition: all .3s;
+                        }
+
+                        &:hover>a {
+                            color: var(--main-color);
+                        }
+
+                        border-bottom: 1px dashed rgba(30, 90, 215, 0.4);
+
+                        &:last-child {
+                            border-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            &:hover>.submenu {
+                visibility: visible;
+                opacity: 1;
+                top: 100%;
+
+                @include breakpoint(md) {
+                    visibility: hidden;
+                    opacity: 0;
+                    top: 0;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(md) {
+        visibility: visible;
+        opacity: 1;
+        top: 0;
+        background: #fff;
+        width: 100%;
+    }
+}

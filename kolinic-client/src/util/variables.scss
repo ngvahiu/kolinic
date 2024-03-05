@@ -1,0 +1,30 @@
+$sm: 639.99px;
+$md: 767.98px;
+$lg: 991.99px;
+$xl: 1199.99px;
+
+@mixin breakpoint($point) {
+    @if $point ==sm {
+        @media (max-width: $sm) {
+            @content;
+        }
+    }
+
+    @if $point ==md {
+        @media (max-width: $md) {
+            @content;
+        }
+    }
+
+    @if $point ==lg {
+        @media (max-width: $lg) {
+            @content;
+        }
+    }
+
+    @if $point ==xl {
+        @media (max-width: $xl) {
+            @content;
+        }
+    }
+}

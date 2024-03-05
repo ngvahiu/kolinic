@@ -1,0 +1,52 @@
+.single-doctor {
+    text-align: center;
+
+    .doctor-image {
+        margin: 0 auto -65px;
+        text-align: center;
+        position: relative;
+        display: inline-block;
+
+        img {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            width: 150px;
+            height: 150px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            left: -2px;
+            top: -2px;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            background: #1e5ad7;
+        }
+    }
+
+    .doctor-content {
+        padding: 110px 10px 40px;
+        text-align: center;
+        box-shadow: 0px 0px 9px 1px rgba(0, 201, 183, 0.1);
+        border-radius: 10px;
+
+        h3 {
+            transition: all .3s;
+        }
+
+        span {
+            color: var(--text-note-color);
+        }
+
+        p {
+            max-width: 270px;
+            margin: 20px auto 0;
+        }
+
+        &:hover>h3 {
+            color: var(--main-color);
+        }
+    }
+
+}

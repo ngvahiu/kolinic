@@ -1,0 +1,103 @@
+@import "../.././util/variables.scss";
+
+.single-testimonial {
+    margin: 15px;
+    padding: 2px;
+
+    @include breakpoint(md) {
+        padding: 0px;
+    }
+
+    .testimonial-top {
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        background-color: #fff;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+
+        @include breakpoint(md) {
+            padding: 0px;
+        }
+
+        i {
+            color: var(--main-color);
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-description {
+            line-height: 32px;
+            font-size: 32px;
+            font-style: italic;
+            font-weight: 500;
+            color: var(--text-note-color);
+
+            @include breakpoint(sm) {
+                font-size: 12px;
+                line-height: 12px;
+            }
+
+            @include breakpoint(md) {
+                font-size: 14px;
+                line-height: 14px;
+            }
+        }
+    }
+
+    .testimonial-author {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+
+        .author-image {
+            position: relative;
+            display: inline-block;
+            margin-right: 10px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: calc(100% + 4px);
+                height: calc(100% + 4px);
+                left: -2px;
+                top: -2px;
+                clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+                background: #1e5ad7;
+            }
+
+            img {
+                width: 100px;
+                clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            }
+
+            @include breakpoint(md) {
+                display: none;
+            }
+        }
+
+        .author-details {
+            .author-title {
+                font-size: 24px;
+                line-height: 1.3;
+                font-weight: 700;
+                margin: -8px 0;
+
+                @include breakpoint(md) {
+                    font-size: 18px;
+                }
+            }
+
+            .author-para {
+                font-style: italic;
+                margin-top: 10px;
+                color: var(--text-note-color);
+
+                @include breakpoint(md) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

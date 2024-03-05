@@ -1,0 +1,37 @@
+.brands-wrapper {
+    padding: 50px 20px;
+    margin: 0 100px;
+    background: var(--main-color);
+    position: relative;
+    z-index: 2;
+
+    .brand-item {
+        display: flex !important;
+        justify-content: center;
+
+        .brand-image {
+            width: 180px;
+        }
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: -40px;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-bottom: 70px solid #1744A6;
+        border-left: 40px solid transparent;
+        border-right: 0px solid transparent;
+        z-index: -1;
+    }
+
+    &::after {
+        left: 100%;
+        right: -40px;
+        border-right: 40px solid transparent;
+        border-left: 0px solid transparent;
+    }
+}

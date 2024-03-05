@@ -1,0 +1,146 @@
+[
+  {
+    "name": "PainEase-200",
+    "packSize": 2,
+    "remaining": 60,
+    "price": 12.99,
+    "description": "Mild analgesic for regular pain relief, suitable for a 2-month supply.",
+    "img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/drugs/painEaseSpray.png",
+    "categoryId": 1
+  },
+  {
+    "name": "FastRelief Capsules",
+    "packSize": 3,
+    "remaining": 90,
+    "price": 19.99,
+    "description": "Powerful analgesic capsules for fast and effective pain relief, ideal for a 3-month supply.",
+    "img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/drugs/fastRelief-capsules.png",
+    "categoryId": 1
+  },
+  {
+    "name": "AntibioGuard-500",
+    "packSize": 1,
+    "remaining": 30,
+    "price": 24.99,
+    "description": "Broad-spectrum antibiotic for bacterial infections, recommended for a 1-month supply.",
+    "img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/drugs/antibio-guard.png",
+    "categoryId": 2
+  },
+  {
+    "name": "BacTerminator Capsules",
+    "packSize": 2,
+    "remaining": 60,
+    "price": 39.99,
+    "description": "Potent antibiotic capsules to combat various bacterial infections, suitable for a 2-month supply.",
+    "img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/drugs/bacTerminator.png",
+    "categoryId": 2
+  },
+  {
+    "name": "HeartGuard-100",
+    "packSize": 3,
+    "remaining": 90,
+    "price": 29.99,
+    "description": "Cardiovascular medication for maintaining a healthy heart, recommended for a 3-month supply.",
+    "img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/drugs/heartGuard.png",
+    "categoryId": 3
+  },
+  {
+    "name": "Vasodilator Plus",
+    "packSize": 2,
+    "remaining": 60,
+    "price": 45.99,
+    "description": "Advanced vasodilator for improving blood circulation, suitable for a 2-month supply.",
+    "img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/drugs/vasodilator-plus.png",
+    "categoryId": 3
+  },
+  {
+    "name": "HormoBalance-200",
+    "packSize": 1,
+    "remaining": 30,
+    "price": 19.99,
+    "description": "Balancing hormonal medication for overall well-being, recommended for a 1-month supply.",
+    "img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/drugs/hormoBalance-200.png",
+    "categoryId": 4
+  },
+  {
+    "name": "FemHorm Enhancer",
+    "packSize": 2,
+    "remaining": 60,
+    "price": 34.99,
+    "description": "Hormone modulator capsules designed to support female health, suitable for a 2-month supply.",
+    "img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/drugs/femHorm-enhancer.png",
+    "categoryId": 4
+  },
+  {
+    "name": "RelaxoFlex-250",
+    "packSize": 1,
+    "remaining": 30,
+    "price": 17.99,
+    "description": "Muscle relaxant for relieving tension and promoting relaxation, recommended for a 1-month supply.",
+    "img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/drugs/relaxoFlex-250.png",
+    "categoryId": 5
+  },
+  {
+    "name": "MuscleEase Capsules",
+    "packSize": 2,
+    "remaining": 60,
+    "price": 29.99,
+    "description": "Capsules designed to provide effective muscle relaxation, suitable for a 2-month supply.",
+    "img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/drugs/muscleEase-capsules.png",
+    "categoryId": 5
+  },
+  {
+    "name": "EnergyBoost-300",
+    "packSize": 1,
+    "remaining": 30,
+    "price": 14.99,
+    "description": "Stimulant for a quick energy boost and increased alertness, recommended for a 1-month supply.",
+    "img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/drugs/energyBoost-300.png",
+    "categoryId": 6
+  },
+  {
+    "name": "FocusMax Tablets",
+    "packSize": 2,
+    "remaining": 60,
+    "price": 24.99,
+    "description": "Tablets designed to enhance focus and mental clarity, suitable for a 2-month supply.",
+    "img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/drugs/focusMax-tablets.png",
+    "categoryId": 6
+  },
+  {
+    "name": "VitaEssentials-50",
+    "packSize": 3,
+    "remaining": 90,
+    "price": 12.99,
+    "description": "Comprehensive vitamin and mineral supplement for overall health, recommended for a 3-month supply.",
+    "img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/drugs/vitaEssentials-50.png",
+    "categoryId": 7
+  },
+  {
+    "name": "MineralPlus Capsules",
+    "packSize": 2,
+    "remaining": 60,
+    "price": 19.99,
+    "description": "Capsules containing essential minerals to support a balanced diet, suitable for a 2-month supply.",
+    "img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/drugs/mineralPlus-capsules.png",
+    "categoryId": 7
+  },
+  {
+    "name": "BloodPressure Monitor-3000",
+    "packSize": 1,
+    "remaining": 1,
+    "price": 49.99,
+    "description": "Digital blood pressure monitor for accurate at-home monitoring, suitable for long-term use.",
+    "img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/drugs/bloodPressure-monitor.png",
+    "categoryId": 8
+  },
+  {
+    "name": "PulseOximeter Pro",
+    "packSize": 1,
+    "remaining": 1,
+    "price": 29.99,
+    "description": "Portable pulse oximeter for measuring oxygen saturation levels, designed for regular use.",
+    "img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/drugs/pulseOximeter-pro.png",
+    "categoryId": 8
+  }
+]

@@ -1,0 +1,273 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+:root,
+:root.light-mode {
+  /* Grey */
+  --color-grey-0: #fff;
+  --color-grey-50: #f9fafb;
+  --color-grey-100: #f3f4f6;
+  --color-grey-200: #e5e7eb;
+  --color-grey-300: #d1d5db;
+  --color-grey-400: #9ca3af;
+  --color-grey-500: #6b7280;
+  --color-grey-600: #4b5563;
+  --color-grey-700: #374151;
+  --color-grey-800: #1f2937;
+  --color-grey-900: #111827;
+  --color-blue-100: #e0f2fe;
+  --color-blue-700: #0369a1;
+  --color-green-100: #dcfce7;
+  --color-green-700: #15803d;
+  --color-yellow-100: #fef9c3;
+  --color-yellow-700: #a16207;
+  --color-silver-100: #e5e7eb;
+  --color-silver-700: #374151;
+  --color-indigo-100: #e0e7ff;
+  --color-indigo-700: #4338ca;
+  --color-red-100: #fee2e2;
+  --color-red-700: #b91c1c;
+  --color-red-800: #991b1b;
+  --backdrop-color: rgba(255, 255, 255, 0.1);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0px 0.6rem 2.4rem rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 2.4rem 3.2rem rgba(0, 0, 0, 0.12);
+  --image-grayscale: 0;
+  --image-opacity: 100%;
+}
+
+:root.dark-mode {
+  --color-grey-0: #18212f;
+  --color-grey-50: #111827;
+  --color-grey-100: #1f2937;
+  --color-grey-200: #374151;
+  --color-grey-300: #4b5563;
+  --color-grey-400: #6b7280;
+  --color-grey-500: #9ca3af;
+  --color-grey-600: #d1d5db;
+  --color-grey-700: #e5e7eb;
+  --color-grey-800: #f3f4f6;
+  --color-grey-900: #f9fafb;
+  --color-blue-100: #075985;
+  --color-blue-700: #e0f2fe;
+  --color-green-100: #166534;
+  --color-green-700: #dcfce7;
+  --color-yellow-100: #854d0e;
+  --color-yellow-700: #fef9c3;
+  --color-silver-100: #374151;
+  --color-silver-700: #f3f4f6;
+  --color-indigo-100: #3730a3;
+  --color-indigo-700: #e0e7ff;
+  --color-red-100: #fee2e2;
+  --color-red-700: #b91c1c;
+  --color-red-800: #991b1b;
+  --backdrop-color: rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0px 0.6rem 2.4rem rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 2.4rem 3.2rem rgba(0, 0, 0, 0.4);
+  --image-grayscale: 10%;
+  --image-opacity: 90%;
+}
+
+:root {
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+  --border-radius-tiny: 3px;
+  --border-radius-sm: 5px;
+  --border-radius-md: 7px;
+  --border-radius-lg: 9px;
+
+  --main-color: #1e5ad7;
+  --main-color-hover: #83a2e6;
+  --text-heading-color: #292929;
+  --bg-footer-color: #262229;
+  --text-note-color: #777777;
+  --bg-section-color: #f9f9f9;
+}
+
+/* *,
+*::before,
+*::after {
+  @apply m-0 box-border p-0 transition-[background-color] delay-[0.05s] duration-[0.3s,border];
+
+  /* Creating animations for dark mode */
+/* } */
+
+html {
+  @apply text-[62.5%];
+}
+
+body {
+  @apply w-full min-h-screen text-[1.6rem] leading-normal text-[color:var(--color-grey-700)] transition-[color] delay-[0.3s] duration-[0.3s,background-color];
+  font-family: 'Poppins', sans-serif;
+}
+
+input,
+button,
+textarea,
+select {
+  @apply text-inherit;
+  font: inherit;
+}
+
+button {
+  @apply cursor-pointer;
+}
+
+*:disabled {
+  @apply cursor-not-allowed;
+}
+
+select:disabled,
+input:disabled {
+  @apply bg-[color:var(--color-grey-200)] text-[color:var(--color-grey-500)];
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  @apply -outline-offset-1;
+  outline: 2px solid var(--color-brand-600);
+}
+
+/* Parent selector, finally 😃 */
+button:has(svg) {
+  @apply leading-[0];
+}
+
+a {
+  @apply text-inherit no-underline;
+}
+
+ul {
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply break-words;
+  hyphens: auto;
+  color: var(--text-heading-color);
+}
+
+p {
+  font-weight: 300;
+}
+
+img {
+  @apply max-w-full opacity-[var(--image-opacity)] grayscale-[var(--image-grayscale)];
+  /* For dark mode */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bg-section {
+  background-color: var(--bg-section-color);
+}
+
+.ant-select-show-search.ant-select:not(.ant-select-customize-input) .ant-select-selector,
+.ant-input {
+  border-radius: 20px;
+  font-size: 16px;
+  text-align: left;
+  color: var(--text-note-color);
+}
+
+.ant-select .ant-select-arrow {
+  font-size: 16px;
+}
+
+.ant-tabs-left>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab,
+.ant-tabs-right>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab,
+.ant-tabs-left>div>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab,
+.ant-tabs-right>div>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab {
+  @apply my-[10px] mr-[10px] ml-0 p-0;
+}
+
+.ant-tabs-left>.ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-right>.ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-left>div>.ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-right>div>.ant-tabs-nav .ant-tabs-tab {
+  @apply my-[10px] mr-[10px] ml-0 p-0;
+}
+
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  @apply text-center;
+}
+
+.slick-initialized .slick-slide {
+  @apply px-[10px];
+}
+
+.ant-upload-wrapper.ant-upload-picture-card-wrapper .ant-upload.ant-upload-select,
+.ant-upload-wrapper.ant-upload-picture-circle-wrapper .ant-upload.ant-upload-select {
+  @apply w-[40px] h-[40px] bg-[--color-grey-0];
+}
+
+.ant-progress {
+  @apply flex
+}
+
+.ant-progress .ant-progress-text {
+  @apply text-[--color-brand-600] text-[1.7rem] font-bold;
+}
+
+.ant-table-cell,
+.ant-table-wrapper .ant-table-thead>tr>th,
+.ant-table-wrapper .ant-table-thead>tr>td {
+  @apply text-center;
+}
+
+.ant-btn-primary {
+  @apply bg-[--main-color];
+}
+
+.ant-form-item {
+  @apply mb-[12px] md:mb-[12px] 
+}
+
+.slick-slide.slick-active div {
+  text-align: center !important;
+}
+
+@layer utilities {
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+}

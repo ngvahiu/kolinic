@@ -1,0 +1,145 @@
+[
+    {
+        "fullName": "Steve T. Scaife",
+        "email": "steve@example.com",
+        "phoneNumber": "+16012345678",
+        "role": "ADMIN",
+        "active": true,
+        "password": "$2b$10$NufAT0whpweVvgUfo4aCCOLMjheZncKZt5Jlo.j11wgqmQJw4Am32",
+        "gender": "MALE",
+        "address": "123 Main St, Cityville, USA",
+        "dob": "1980-05-15"
+    },
+    {
+        "fullName": "Aarav Lynn",
+        "email": "aarav@example.com",
+        "phoneNumber": "+16123456789",
+        "role": "ADMIN",
+        "active": true,
+        "password": "$2b$10$NufAT0whpweVvgUfo4aCCOLMjheZncKZt5Jlo.j11wgqmQJw4Am32",
+        "gender": "MALE",
+        "address": "456 Oak Ave, Townsville, USA",
+        "dob": "1980-05-15"
+    },
+    {
+        "fullName": "Jonas Schmedtmann",
+        "email": "admin@natours.io",
+        "phoneNumber": "+16234567890",
+        "role": "ADMIN",
+        "active": true,
+        "password": "$2b$10$NufAT0whpweVvgUfo4aCCOLMjheZncKZt5Jlo.j11wgqmQJw4Am32",
+        "gender": "MALE",
+        "address": "789 Pine Blvd, Villagetown, USA",
+        "dob": "1980-05-15"
+    },
+    {
+        "fullName": "Cristian Vega",
+        "email": "chris@example.com",
+        "phoneNumber": "+16234567890",
+        "role": "USER",
+        "active": true,
+        "password": "$2b$10$NufAT0whpweVvgUfo4aCCOLMjheZncKZt5Jlo.j11wgqmQJw4Am32",
+        "gender": "FEMALE",
+        "address": "789 Pine Blvd, Villagetown, USA",
+        "dob": "1995-10-22"
+    },
+    {
+        "fullName": "Lourdes Browning",
+        "email": "loulou@example.com",
+        "phoneNumber": "+16234567890",
+        "role": "USER",
+        "active": true,
+        "password": "$2b$10$NufAT0whpweVvgUfo4aCCOLMjheZncKZt5Jlo.j11wgqmQJw4Am32",
+        "gender": "NEUTRAL",
+        "address": "789 Pine Blvd, Villagetown, USA",
+        "dob": "1995-10-22"
+    },
+    {
+        "fullName": "Sophie Louise Hart",
+        "email": "sophie@example.com",
+        "phoneNumber": "+16234567890",
+        "role": "USER",
+        "active": true,
+        "password": "$2b$10$NufAT0whpweVvgUfo4aCCOLMjheZncKZt5Jlo.j11wgqmQJw4Am32",
+        "gender": "FEMALE",
+        "address": "456 Oak Ave, Townsville, USA",
+        "dob": "1995-10-22"
+    },
+    {
+        "fullName": "Ayla Cornell",
+        "email": "ayls@example.com",
+        "phoneNumber": "+16234567890",
+        "role": "USER",
+        "active": true,
+        "password": "$2b$10$NufAT0whpweVvgUfo4aCCOLMjheZncKZt5Jlo.j11wgqmQJw4Am32",
+        "gender": "MALE",
+        "address": "456 Oak Ave, Townsville, USA",
+        "dob": "1995-10-22"
+    },
+    {
+        "fullName": "Leo Gillespie",
+        "email": "leo@example.com",
+        "phoneNumber": "+16234567890",
+        "role": "USER",
+        "active": true,
+        "password": "$2b$10$NufAT0whpweVvgUfo4aCCOLMjheZncKZt5Jlo.j11wgqmQJw4Am32",
+        "gender": "NEUTRAL",
+        "address": "456 Oak Ave, Townsville, USA",
+        "dob": "1995-10-22"
+    },
+    {
+        "fullName": "Jennifer Hardy",
+        "email": "jennifer@example.com",
+        "phoneNumber": "+16234567890",
+        "role": "USER",
+        "active": true,
+        "password": "$2b$10$NufAT0whpweVvgUfo4aCCOLMjheZncKZt5Jlo.j11wgqmQJw4Am32",
+        "gender": "FEMALE",
+        "address": "456 Oak Ave, Townsville, USA",
+        "dob": "1995-10-22"
+    },
+    {
+        "fullName": "Kate Morrison",
+        "email": "kate@example.com",
+        "phoneNumber": "+16234567890",
+        "role": "USER",
+        "active": true,
+        "password": "$2b$10$NufAT0whpweVvgUfo4aCCOLMjheZncKZt5Jlo.j11wgqmQJw4Am32",
+        "gender": "MALE",
+        "address": "456 Oak Ave, Townsville, USA",
+        "dob": "1988-03-10"
+    },
+    {
+        "fullName": "Eliana Stout",
+        "email": "eliana@example.com",
+        "phoneNumber": "+16234567890",
+        "role": "USER",
+        "active": true,
+        "password": "$2b$10$NufAT0whpweVvgUfo4aCCOLMjheZncKZt5Jlo.j11wgqmQJw4Am32",
+        "gender": "FEMALE",
+        "address": "456 Oak Ave, Townsville, USA",
+        "dob": "1988-03-10"
+    },
+    {
+        "fullName": "Miyah Myles",
+        "email": "miyah@example.com",
+        "phoneNumber": "+16234567890",
+        "role": "ADMIN",
+        "active": true,
+        "password": "$2b$10$NufAT0whpweVvgUfo4aCCOLMjheZncKZt5Jlo.j11wgqmQJw4Am32",
+        "gender": "MALE",
+        "address": "456 Oak Ave, Townsville, USA",
+        "dob": "1988-03-10"
+    },
+    {
+        "fullName": "Ben Hadley",
+        "email": "ben@example.com",
+        "phoneNumber": "+16234567890",
+        "role": "USER",
+        "active": true,
+        "password": "$2b$10$NufAT0whpweVvgUfo4aCCOLMjheZncKZt5Jlo.j11wgqmQJw4Am32",
+        "gender": "NEUTRAL",
+        "address": "456 Oak Ave, Townsville, USA",
+        "dob": "1988-03-10"
+    }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Dr. Sarah Johnson",
+    "description": "General Practitioner",
+    "about": "Dedicated to providing compassionate healthcare for all patients.",
+    "education": "MD in Dental",
+    "dob": "1980-05-12",
+    "workingYear": 2005,
+    "avatar": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/doctor/doctor-1.png",
+    "departmentId": 1
+  },
+  {
+    "name": "Dr. James Rodriguez",
+    "description": "Pediatrician",
+    "about": "Specializing in child health and development.",
+    "education": "PhD in Pediatrics",
+    "dob": "1975-09-28",
+    "workingYear": 1990,
+    "avatar": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/doctor/doctor-2.png",
+    "departmentId": 2
+  },
+  {
+    "name": "Dr. Emily Chen",
+    "description": "Gynecologist",
+    "about": "Committed to preventing and treating heart diseases.",
+    "education": "MD in Gynecology",
+    "dob": "1982-11-03",
+    "workingYear": 2009,
+    "avatar": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/doctor/doctor-3.png",
+    "departmentId": 3
+  },
+  {
+    "name": "Dr. Michael Turner",
+    "description": "Orthopedic Surgeon",
+    "about": "Expert in musculoskeletal conditions and surgical interventions.",
+    "education": "MD in Orthopedics",
+    "dob": "1978-07-19",
+    "workingYear": 2003,
+    "avatar": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/doctor/doctor-4.png",
+    "departmentId": 4
+  },
+  {
+    "name": "Dr. Olivia White",
+    "description": "Cardiologist",
+    "about": "Providing mental health support and therapy.",
+    "education": "PhD in Cardiology",
+    "dob": "1985-04-08",
+    "workingYear": 2010,
+    "avatar": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/doctor/doctor-5.png",
+    "departmentId": 5
+  },
+  {
+    "name": "Dr. Daniel Lee",
+    "description": "Ophthalmologist",
+    "about": "Specializing in eye care and vision correction.",
+    "education": "MD in Ophthalmology",
+    "dob": "1973-12-15",
+    "workingYear": 2000,
+    "avatar": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/doctor/doctor-6.png",
+    "departmentId": 6
+  }
+]

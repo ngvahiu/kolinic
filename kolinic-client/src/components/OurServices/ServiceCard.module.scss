@@ -1,0 +1,52 @@
+.single-service {
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    padding: 60px 10px;
+    margin: 10px 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    transition: all .3s;
+    cursor: pointer;
+
+    .service-icon {
+        height: 70px;
+        width: 70px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #1e5ad7;
+        margin: 0 auto 25px;
+        border: 3px solid rgba(30, 90, 215, 0.7);
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: calc(100% + 20px);
+            width: calc(100% + 20px);
+            left: -10px;
+            top: -10px;
+            border-radius: 50%;
+            background: rgba(30, 90, 215, 0.2);
+        }
+    }
+
+    h2 {
+        transition: all .3s;
+    }
+
+    .service-description {
+        max-width: 275px;
+        margin: 20px auto 0;
+        color: var(--text-note-color);
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    &:hover h2 {
+        color: var(--main-color);
+    }
+}

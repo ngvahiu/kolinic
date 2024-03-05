@@ -1,0 +1,44 @@
+[
+	{
+		"name": "Dental",
+		"description": "Dental department is a governmental or organizational entity responsible for promoting and protecting public health within a specific region or community. It plays a vital role in disease prevention, health promotion, and overall well-being",
+		"functions": "Liver Function Tests. The Liver Function Tests (LFT)ed/Full Blood Examination/TSH (Thyroid Stimulating Hormone) Quantification Urinalysis",
+		"logo": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/department/dental-logo.png",
+		"img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/department/dental-img.png"
+	},
+	{
+		"name": "Surgery",
+		"description": "Surgery department is a governmental or organizational entity responsible for promoting and protecting public health within a specific region or community. It plays a vital role in disease prevention, health promotion, and overall well-being",
+		"functions": "Liver Function Tests. The Liver Function Tests (LFT)ed/Full Blood Examination/TSH (Thyroid Stimulating Hormone) Quantification Urinalysis",
+		"logo": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/department/surgery-logo.png",
+		"img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/department/surgery-img.png"
+	},
+	{
+		"name": "Gynecology",
+		"description": "Gynecology department is a governmental or organizational entity responsible for promoting and protecting public health within a specific region or community. It plays a vital role in disease prevention, health promotion, and overall well-being",
+		"functions": "Liver Function Tests. The Liver Function Tests (LFT)ed/Full Blood Examination/TSH (Thyroid Stimulating Hormone) Quantification Urinalysis",
+		"logo": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/department/gynecology-logo.png",
+		"img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/department/gynecology-img.png"
+	},
+	{
+		"name": "Laboratory",
+		"description": "Laboratory department is a governmental or organizational entity responsible for promoting and protecting public health within a specific region or community. It plays a vital role in disease prevention, health promotion, and overall well-being",
+		"functions": "Liver Function Tests. The Liver Function Tests (LFT)ed/Full Blood Examination/TSH (Thyroid Stimulating Hormone) Quantification Urinalysis",
+		"logo": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/department/laboratory-logo.png",
+		"img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/department/laboratory-img.png"
+	},
+	{
+		"name": "Cardiology",
+		"description": "Cardiology department is a governmental or organizational entity responsible for promoting and protecting public health within a specific region or community. It plays a vital role in disease prevention, health promotion, and overall well-being",
+		"functions": "Liver Function Tests. The Liver Function Tests (LFT)ed/Full Blood Examination/TSH (Thyroid Stimulating Hormone) Quantification Urinalysis",
+		"logo": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/department/cardiology-logo.png",
+		"img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/department/cardiology-img.png"
+	},
+	{
+		"name": "Emergency",
+		"description": "Emergency department is a governmental or organizational entity responsible for promoting and protecting public health within a specific region or community. It plays a vital role in disease prevention, health promotion, and overall well-being",
+		"functions": "Liver Function Tests. The Liver Function Tests (LFT)ed/Full Blood Examination/TSH (Thyroid Stimulating Hormone) Quantification Urinalysis",
+		"logo": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/department/emergency-logo.png",
+		"img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/department/emergency-img.png"
+	}
+]

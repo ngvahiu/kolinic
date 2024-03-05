@@ -1,0 +1,10 @@
+[
+  { "title": "Analgesics","img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/drugs/analgesics-category.png"},
+  { "title": "Antibiotics", "img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/drugs/antibiotics-category.png" },
+  { "title": "Cardiovascular Medications","img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/drugs/cardiovascular-medications-category.png" },
+  { "title": "Hormones and Hormone Modulators", "img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/drugs/hormones-category.png"},
+  { "title": "Muscle Relaxants", "img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/drugs/muscle-category.png" },
+  { "title": "Stimulants", "img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/drugs/stimulants-category.png" },
+  { "title": "Vitamins and Minerals", "img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/drugs/vitamins-minerals-category.png"},
+  { "title": "Medical devices", "img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/drugs/medical-devices-category.png"}
+]

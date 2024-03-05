@@ -1,0 +1,50 @@
+[
+	{
+		"name": "Cardiology",
+		"description": "Cardiology is the branch of medicine that deals with the study, diagnosis, and treatment of disorders related to the heart and the circulatory system. Cardiologists, the medical professionals specializing in this field, focus on understanding the structure and function of the heart, as well as the blood vessels and the cardiovascular system as a whole. Their primary goal is to prevent, diagnose, and manage various cardiovascular conditions to promote heart health and overall well-being.",
+		"functions": "Early Detection and Prevention/Effective Treatment and Management/Enhanced Quality of Life",
+		"benefits": "Cardiology focuses on preventive measures, early detection, and effective management of cardiovascular diseases. By emphasizing lifestyle modifications, risk factor management, and timely interventions, cardiology aims to promote heart health and reduce the incidence of heart-related conditions. This not only addresses individual well-being but also contributes to public health by lowering the overall burden of cardiovascular diseases in communities.",
+		"img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/services-logo/cardiology-img.png",
+		"logo": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/services-logo/cardiology-logo.png"
+	},
+	{
+		"name": "Dental Surgery",
+		"description": "Dental surgery is a specialized field within dentistry that involves surgical procedures aimed at diagnosing and treating a variety of oral and maxillofacial conditions. Dental surgeons, also known as oral and maxillofacial surgeons, are highly trained dental professionals who have completed additional education and clinical training to perform surgical interventions in the oral and facial regions. Dental surgery encompasses a range of procedures, from routine dental extractions to more complex surgeries involving the jaw, facial bones, and soft tissues.",
+		"functions": "Early Detection and Prevention/Effective Treatment and Management/Enhanced Quality of Life",
+		"benefits": "Dental surgery provides a comprehensive approach to diagnosing, treating, and managing various oral and maxillofacial conditions that may not be adequately addressed through non-surgical means. Whether it's extracting problematic teeth, correcting jaw alignment, managing facial trauma, or addressing congenital anomalies, dental surgery plays a vital role in ensuring optimal oral health and overall well-being.",
+		"img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/services-logo/dental-img.png",
+		"logo": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/services-logo/dental-logo.png"
+	},
+	{
+		"name": "Ophthalmology",
+		"description": "Ophthalmology is a medical specialty that focuses on the study, diagnosis, and treatment of disorders related to the eyes and the visual system. Ophthalmologists are highly trained medical doctors who specialize in the comprehensive care of the eyes, including medical, surgical, and optical aspects. The field encompasses a wide range of conditions, from common refractive errors to complex eye diseases, and it plays a crucial role in maintaining and restoring vision.",
+		"functions": "Early Detection and Prevention/Effective Treatment and Management/Enhanced Quality of Life",
+		"benefits": "Ophthalmologists prescribe corrective lenses (glasses or contact lenses) to address common refractive errors, such as myopia (nearsightedness), hyperopia (farsightedness), astigmatism, and presbyopia. This improves visual acuity and quality",
+		"img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/services-logo/ophthalmology-img.png",
+		"logo": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/services-logo/ophthalmology-logo.png"
+	},
+	{
+		"name": "Outpatient Surgery",
+		"description": "Outpatient Surgery is a medical specialty that focuses on the study, diagnosis, and treatment of disorders related to the eyes and the visual system. Ophthalmologists are highly trained medical doctors who specialize in the comprehensive care of the eyes, including medical, surgical, and optical aspects. The field encompasses a wide range of conditions, from common refractive errors to complex eye diseases, and it plays a crucial role in maintaining and restoring vision.",
+		"functions": "Early Detection and Prevention/Effective Treatment and Management/Enhanced Quality of Life",
+		"benefits": "Outpatient Surgery prescribe corrective lenses (glasses or contact lenses) to address common refractive errors, such as myopia (nearsightedness), hyperopia (farsightedness), astigmatism, and presbyopia. This improves visual acuity and quality",
+		"img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/services-logo/outpatient-img.png",
+		"logo": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/services-logo/outpatient-logo.png"
+	},
+	{
+		"name": "Gynaecological",
+		"description": "Gynaecological is a medical specialty that focuses on the study, diagnosis, and treatment of disorders related to the eyes and the visual system. Ophthalmologists are highly trained medical doctors who specialize in the comprehensive care of the eyes, including medical, surgical, and optical aspects. The field encompasses a wide range of conditions, from common refractive errors to complex eye diseases, and it plays a crucial role in maintaining and restoring vision.",
+		"functions": "Early Detection and Prevention/Effective Treatment and Management/Enhanced Quality of Life",
+		"benefits": "Gynaecological prescribe corrective lenses (glasses or contact lenses) to address common refractive errors, such as myopia (nearsightedness), hyperopia (farsightedness), astigmatism, and presbyopia. This improves visual acuity and quality",
+		"img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/services-logo/gynaecological-img.png",
+		"logo": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/services-logo/gynaecological-logo.png"
+	},
+	{
+		"name": "Laboratory Analysis",
+		"description": "Laboratory Analysis is a medical specialty that focuses on the study, diagnosis, and treatment of disorders related to the eyes and the visual system. Ophthalmologists are highly trained medical doctors who specialize in the comprehensive care of the eyes, including medical, surgical, and optical aspects. The field encompasses a wide range of conditions, from common refractive errors to complex eye diseases, and it plays a crucial role in maintaining and restoring vision.",
+		"functions": "Early Detection and Prevention/Effective Treatment and Management/Enhanced Quality of Life",
+		"benefits": "Laboratory Analysis prescribe corrective lenses (glasses or contact lenses) to address common refractive errors, such as myopia (nearsightedness), hyperopia (farsightedness), astigmatism, and presbyopia. This improves visual acuity and quality",
+		"img": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/services-logo/laboratory-img.png",
+		"logo": "https://kolinic-bucket.s3.ap-southeast-1.amazonaws.com/services-logo/laboratory-logo.png"
+	}
+]
