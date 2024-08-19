@@ -48,7 +48,7 @@ public class SecurityFilterChainConfig {
 								authz.requestMatchers("/email/**").permitAll();
 								authz.requestMatchers("/payment/*", "/payment/**").permitAll();
 								authz.requestMatchers("/users/me").hasAnyAuthority(Role.ADMIN.name(), Role.USER.name());
-								authz.requestMatchers("/users", "/users/*").hasAnyAuthority(Role.ADMIN.name());
+								authz.requestMatchers("/users", "/users/*", "/users/activate/*").hasAnyAuthority(Role.ADMIN.name());
 								authz.requestMatchers(HttpMethod.GET, "/services", "/services/*").permitAll();
 								authz.requestMatchers(HttpMethod.POST, "/services").hasAnyAuthority(Role.ADMIN.name());
 								authz.requestMatchers(HttpMethod.PATCH, "/services/*").hasAnyAuthority(Role.ADMIN.name());

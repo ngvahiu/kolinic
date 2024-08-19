@@ -23,7 +23,7 @@ public class LogoutService implements LogoutHandler {
 		final String jwt;
 		
 		if(authHeader == null || !authHeader.startsWith("Bearer ")) {
-			return;
+			throw new RuntimeException("Unauthorized. JWT Token is missing");
 		}
 		
 		jwt = authHeader.substring(7);

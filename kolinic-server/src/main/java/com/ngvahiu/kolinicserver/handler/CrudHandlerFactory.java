@@ -9,11 +9,14 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Component;
 
 import com.ngvahiu.kolinicserver.exception.NotFoundException;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Component
+@Transactional(readOnly = true)
 public class CrudHandlerFactory<T> {
+	@Transactional
 	public T deleteOne(JpaRepository<T, Long> modelRepo, long id) {
 		T doc = modelRepo.findById(id).orElseThrow(() -> new NotFoundException("No document found with id: " + id));
 		modelRepo.deleteById(id);
@@ -24,12 +27,14 @@ public class CrudHandlerFactory<T> {
 		T doc = modelRepo.findById(id).orElseThrow(() -> new NotFoundException("No document found with id: " + id));
 		return doc;
 	}
-	
+
+	@Transactional
 	public T updateOne(JpaRepository<T, Long> modelRepo, T body) {
 		T doc = modelRepo.save(body);
 		return doc;
 	}
-	
+
+	@Transactional
 	public T createOne(JpaRepository<T, Long> modelRepo, T body) {
 		T doc = modelRepo.save(body);
 		return doc;

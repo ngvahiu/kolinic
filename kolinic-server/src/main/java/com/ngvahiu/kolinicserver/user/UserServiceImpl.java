@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.Locale;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.ngvahiu.kolinicserver.exception.NotFoundException;
@@ -17,12 +18,14 @@ import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class UserServiceImpl implements UserService {
 	private final UserRepository userRepo;
 	private final StorageService storageService;
 
 	@Override
-	public APIResponse<?> updateMe(String email, MultipartFile avatar, UpdateMeDTO updateMeDto) throws Exception {
+	@Transactional
+	public APIResponse<UserResponse> updateMe(String email, MultipartFile avatar, UpdateMeDTO updateMeDto) throws Exception {
 		try {
 			var user = userRepo.findByEmail(email).orElseThrow(() -> new NotFoundException("User not found with email : " + email));
 			
@@ -48,5 +51,4 @@ public class UserServiceImpl implements UserService {
 			throw e;
 		}
 	}
-
 }

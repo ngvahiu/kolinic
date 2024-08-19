@@ -32,7 +32,7 @@ public class BaseExceptionHandler {
         res.setStatusCode(400);
         return res;
     }
-	
+
 	@ExceptionHandler(BadRequestException.class)
 	@ResponseStatus(code = HttpStatus.BAD_REQUEST)
     public APIResponse<?> handleBadRequestException(BadRequestException exception) {

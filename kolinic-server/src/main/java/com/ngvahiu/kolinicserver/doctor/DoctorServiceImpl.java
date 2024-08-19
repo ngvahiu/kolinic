@@ -5,6 +5,7 @@ import java.util.Date;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.ngvahiu.kolinicserver.department.DepartmentRepository;
@@ -20,6 +21,7 @@ import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class DoctorServiceImpl implements DoctorService {
 	private final DoctorRepository doctorRepo;
 	private final DepartmentRepository departmentRepo;
@@ -27,6 +29,7 @@ public class DoctorServiceImpl implements DoctorService {
 	private final ModelMapper modelMapper;
 
 	@Override
+	@Transactional
 	public APIResponse<?> createDoctor(MultipartFile avatar, @Valid CreateDoctorDTO createDoctorDto) throws Exception {
 		try {
 			String avatarUrl = storageService.uploadFile(avatar, "doctor");
@@ -52,6 +55,7 @@ public class DoctorServiceImpl implements DoctorService {
 	}
 
 	@Override
+	@Transactional
 	public APIResponse<?> updateDoctor(long id, MultipartFile avatar, @Valid UpdateDoctorDTO updateDoctorDto) throws Exception {
 		try {
 			var doctor = doctorRepo.findById(id).orElseThrow(() -> new NotFoundException("Doctor not found with id: " + id));
@@ -86,5 +90,4 @@ public class DoctorServiceImpl implements DoctorService {
 			throw e;
 		}
 	}
-
 }

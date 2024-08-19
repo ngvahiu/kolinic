@@ -104,7 +104,7 @@ public class KolinicServerApplication {
 		InputStream inputStream = TypeReference.class.getResourceAsStream("/data/users.json");
 		try {
 			List<UserData> userDatas = mapper.readValue(inputStream, userTypeReference);
-			List<User> users = new ArrayList<User>();
+			List<User> users = new ArrayList<>();
 			SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
 			for(UserData userData : userDatas) {
 				User user = User.builder()

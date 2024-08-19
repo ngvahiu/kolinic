@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.ngvahiu.kolinicserver.drug.dtos.CreateDrugDTO;
@@ -35,6 +36,7 @@ import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class DrugServiceImpl implements DrugService {
 	private final DrugRepository drugRepo;
 	private final DrugCategoryRepository drugCategoryRepo;
@@ -45,6 +47,7 @@ public class DrugServiceImpl implements DrugService {
 	private final ModelMapper modelMapper;
 
 	@Override
+	@Transactional
 	public APIResponse<?> createDrug(MultipartFile img, @Valid CreateDrugDTO createDrugDto) {
 		try {
 			String imgUrl = storageService.uploadFile(img, "drugs");
@@ -64,6 +67,7 @@ public class DrugServiceImpl implements DrugService {
 	}
 
 	@Override
+	@Transactional
 	public APIResponse<?> updateDrug(long id, MultipartFile img, @Valid UpdateDrugDTO updateDrugDto) {
 		try {
 			var drug = drugRepo.findById(id).orElseThrow(() -> new NotFoundException("Drug not found with id: " + id));
@@ -100,6 +104,7 @@ public class DrugServiceImpl implements DrugService {
 	}
 
 	@Override
+	@Transactional
 	public APIResponse<?> createOrder(String email, CreateOrderDTO createOrderDto) {
 		try {
 			// create DrugOrder record
@@ -141,5 +146,4 @@ public class DrugServiceImpl implements DrugService {
 			throw e;
 		}
 	}
-
 }

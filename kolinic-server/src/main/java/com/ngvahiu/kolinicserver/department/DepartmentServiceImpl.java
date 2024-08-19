@@ -2,6 +2,7 @@ package com.ngvahiu.kolinicserver.department;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.ngvahiu.kolinicserver.department.dtos.CreateDepartmentDTO;
@@ -16,12 +17,14 @@ import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class DepartmentServiceImpl implements DepartmentService {
 	private final DepartmentRepository departmentRepo;
 	private final StorageService storageService;
 	private final ModelMapper modelMapper;
 
 	@Override
+	@Transactional
 	public APIResponse<?> createDepartment(MultipartFile logo, MultipartFile img,
 			@Valid CreateDepartmentDTO createDepartmentDto) {
 		try {
@@ -39,6 +42,7 @@ public class DepartmentServiceImpl implements DepartmentService {
 	}
 
 	@Override
+	@Transactional
 	public APIResponse<?> updateDepartment(long id, MultipartFile logo, MultipartFile img,
 			@Valid UpdateDepartmentDTO updateDepartmentDto) {
 		try {

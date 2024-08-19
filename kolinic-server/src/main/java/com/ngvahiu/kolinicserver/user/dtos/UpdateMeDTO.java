@@ -2,12 +2,14 @@ package com.ngvahiu.kolinicserver.user.dtos;
 
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Builder
 public class UpdateMeDTO {
 	private String fullName;
 	

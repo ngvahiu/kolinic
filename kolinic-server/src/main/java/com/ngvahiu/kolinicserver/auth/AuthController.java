@@ -1,12 +1,9 @@
 package com.ngvahiu.kolinicserver.auth;
 
+import com.ngvahiu.kolinicserver.user.UserResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -35,39 +32,39 @@ public class AuthController {
 
 	@PostMapping("register")
 	public ResponseEntity<APIResponse<?>> register(@Valid @RequestBody RegisterDTO registerDto, HttpServletRequest request) throws Exception {
-		APIResponse<?> res = authService.register(registerDto, request);
+		APIResponse<AuthResponse> res = authService.register(registerDto, request);
 		return new ResponseEntity<>(res, HttpStatus.CREATED);
 	}
 
 	@PostMapping("authenticate")
 	public ResponseEntity<APIResponse<?>> authenticate(@Valid @RequestBody AuthenticateDTO authDto) {
-		APIResponse<?> res = authService.authenticate(authDto);
+		APIResponse<AuthResponse> res = authService.authenticate(authDto);
 		return new ResponseEntity<>(res, HttpStatus.OK);
 	}
 	
 	@PostMapping("social/authenticate")
 	public ResponseEntity<APIResponse<?>> socialAuthenticate(@Valid @RequestBody SocialAuthenticateDTO authDto) {
-		APIResponse<?> res = authService.socialAuthenticate(authDto);
+		APIResponse<AuthResponse> res = authService.socialAuthenticate(authDto);
 		return new ResponseEntity<>(res, HttpStatus.OK);
 	}
 
 	@PatchMapping("update-password")
 	public ResponseEntity<APIResponse<?>> updatePassword(@Valid @RequestBody UpdatePasswordDTO upPassDto) {
 		String email = SecurityContextHolder.getContext().getAuthentication().getName();
-		APIResponse<?> res = authService.updatePassword(upPassDto, email);
+		APIResponse<AuthResponse> res = authService.updatePassword(upPassDto, email);
 		return new ResponseEntity<>(res, HttpStatus.OK);
 	}
 	
 	@PatchMapping("add-password")
 	public ResponseEntity<APIResponse<?>> addPassword(@Valid @RequestBody AddPasswordDTO addPassDto) {
 		String email = SecurityContextHolder.getContext().getAuthentication().getName();
-		APIResponse<?> res = authService.addPassword(addPassDto, email);
+		APIResponse<UserResponse> res = authService.addPassword(addPassDto, email);
 		return new ResponseEntity<>(res, HttpStatus.OK);
 	}
 
 	@PostMapping("forgot-password")
-	public ResponseEntity<APIResponse<?>> forgotPassword(@RequestParam(name = "email") String email,HttpServletRequest request) throws Exception {
-		APIResponse<?> res = authService.forgotPassword(email);
+	public ResponseEntity<APIResponse<?>> forgotPassword(@RequestParam(name = "email") String email) throws Exception {
+		APIResponse<String> res = authService.forgotPassword(email);
 		return new ResponseEntity<>(res, HttpStatus.CREATED);
 	}
 	
@@ -76,7 +73,7 @@ public class AuthController {
 		@PathVariable(name = "token") String token,
 		@Valid @RequestBody ResetPasswordDTO resetPassDto
 	) {
-		APIResponse<?> res = authService.resetPassword(token, resetPassDto);
+		APIResponse<UserResponse> res = authService.resetPassword(token, resetPassDto);
 		return new ResponseEntity<>(res, HttpStatus.OK);
 	}
 }

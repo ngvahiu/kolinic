@@ -9,6 +9,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 
 import com.ngvahiu.kolinicserver.exception.NotFoundException;
@@ -22,6 +23,7 @@ import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class EmailServiceImpl implements EmailService {
 	private final JavaMailSender mailSender;
 	private final UserRepository userRepo;
@@ -83,6 +85,7 @@ public class EmailServiceImpl implements EmailService {
 	}
 	
 	@Override
+	@Transactional
 	public void verifyEmail(String token, Model model, HttpServletRequest request) {
 		User user = userRepo.findByVerifyToken(token).orElse(null);
 		if (user != null) {

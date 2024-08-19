@@ -17,9 +17,11 @@ import com.ngvahiu.kolinicserver.utils.APIResponse;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class FeedbackServiceImpl implements FeedbackService {
 	private final FeedbackRepository feedbackRepo;
 	private final UserRepository userRepo;
@@ -28,6 +30,7 @@ public class FeedbackServiceImpl implements FeedbackService {
 	private final ModelMapper modelMapper;
 
 	@Override
+	@Transactional
 	public APIResponse<?> createDrug(@Valid CreateFeedbackDTO createFeedbackDto) {
 		try {
 			User user = userRepo.findById(Long.parseLong(createFeedbackDto.getUserId()))

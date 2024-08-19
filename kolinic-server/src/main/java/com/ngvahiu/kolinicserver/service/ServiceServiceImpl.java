@@ -1,5 +1,6 @@
 package com.ngvahiu.kolinicserver.service;
 
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.ngvahiu.kolinicserver.exception.NotFoundException;
@@ -13,11 +14,13 @@ import lombok.RequiredArgsConstructor;
 
 @org.springframework.stereotype.Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class ServiceServiceImpl implements ServiceService {
 	private final ServiceRepository serviceRepo;
 	private final StorageService storageService;
 
 	@Override
+	@Transactional
 	public APIResponse<?> updateService(long id, MultipartFile logo, MultipartFile img, @Valid UpdateServiceDTO updateServiceDto) {
 		try {
 			var service = serviceRepo.findById(id).orElseThrow(() -> new NotFoundException("Service not found with id: " + id));
@@ -48,6 +51,7 @@ public class ServiceServiceImpl implements ServiceService {
 	}
 
 	@Override
+	@Transactional
 	public APIResponse<?> createService(MultipartFile logo, MultipartFile img, @Valid CreateServiceDTO createServiceDto) {
 		try {
 			String logoUrl = storageService.uploadFile(logo, "services-logo");

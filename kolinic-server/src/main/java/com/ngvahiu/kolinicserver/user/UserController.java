@@ -41,7 +41,7 @@ public class UserController {
 		User user = userRepo.findByEmail(email).orElse(null);
 
 		UserResponse userRes = UtilService.filterUserResponse(user);
-		APIResponse<UserResponse> res = APIResponse.<UserResponse>builder().status("success").statusCode(201)
+		APIResponse<UserResponse> res = APIResponse.<UserResponse>builder().status("success").statusCode(200)
 				.data(userRes).build();
 		return new ResponseEntity<>(res, HttpStatus.OK);
 	}
@@ -50,7 +50,7 @@ public class UserController {
 	public ResponseEntity<?> updateMe(@Valid @RequestPart(required = false, value = "body") UpdateMeDTO updateMeDto,
 			@RequestPart(required = false, value = "avatar") MultipartFile avatar) throws Exception {
 		String email = SecurityContextHolder.getContext().getAuthentication().getName();
-		APIResponse<?> res = userService.updateMe(email, avatar, updateMeDto);
+		APIResponse<UserResponse> res = userService.updateMe(email, avatar, updateMeDto);
 		return new ResponseEntity<>(res, HttpStatus.OK);
 	}
 
@@ -58,7 +58,7 @@ public class UserController {
 	@GetMapping
 	public ResponseEntity<APIResponse<?>> getAllUsers(@RequestParam(defaultValue = "") String search) {
 		List<User> users = userRepo.findAllUsersContaining(search);
-		List<UserResponse> usersRes = users.stream().map((user) -> UtilService.filterUserResponse(user)).collect(Collectors.toList());;
+		List<UserResponse> usersRes = users.stream().map((user) -> UtilService.filterUserResponse(user)).collect(Collectors.toList());
 		
 		APIResponse<?> res = APIResponse.builder().status("success").statusCode(200)
 				.data(usersRes).build();
@@ -76,7 +76,7 @@ public class UserController {
 	}
 	
 	@PatchMapping("activate/{id}")
-	public ResponseEntity<APIResponse<?>> updateUser(@PathVariable("id") long id, @RequestParam("value") boolean value) {
+	public ResponseEntity<APIResponse<?>> updateActivationUser(@PathVariable("id") long id, @RequestParam("value") boolean value) {
 		User user = userRepo.findById(id).orElseThrow(() -> new NotFoundException("User not found with id: " + id));
 		user.setActive(value);
 		User savedUser = userRepo.save(user);

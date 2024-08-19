@@ -31,9 +31,11 @@ import com.ngvahiu.kolinicserver.utils.UtilService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class AuthServiceImpl implements AuthService {
 	private final UserRepository userRepo;
 	private final PasswordEncoder passwordEncoder;
@@ -42,7 +44,8 @@ public class AuthServiceImpl implements AuthService {
 	private final EmailService emailService;
 
 	@Override
-	public APIResponse<?> register(RegisterDTO registerDto, HttpServletRequest request) throws Exception {
+	@Transactional
+	public APIResponse<AuthResponse> register(RegisterDTO registerDto, HttpServletRequest request) throws Exception {
 		try {
 			// check if password and passwordConfirm are matched.
 			if (!registerDto.isPasswordsMatched()) {
@@ -73,7 +76,7 @@ public class AuthServiceImpl implements AuthService {
 	}
 
 	@Override
-	public APIResponse<?> authenticate(AuthenticateDTO authDto) {
+	public APIResponse<AuthResponse> authenticate(AuthenticateDTO authDto) {
 		try {
 			var user = userRepo.findByEmail(authDto.getEmail()).orElseThrow(() -> {
 				throw new BadRequestException("Email is not found");
@@ -100,7 +103,8 @@ public class AuthServiceImpl implements AuthService {
 	}
 
 	@Override
-	public APIResponse<?> updatePassword(UpdatePasswordDTO upPassDto, String email) {
+	@Transactional
+	public APIResponse<AuthResponse> updatePassword(UpdatePasswordDTO upPassDto, String email) {
 		try {
 			if (!upPassDto.isNewPasswordsMatched()) {
 				throw new BadRequestException("New passwords are not matched");
@@ -130,7 +134,7 @@ public class AuthServiceImpl implements AuthService {
 	}
 
 	@Override
-	public APIResponse<?> forgotPassword(String email) throws Exception {
+	public APIResponse<String> forgotPassword(String email) throws Exception {
 		try {
 			var user = userRepo.findByEmail(email)
 					.orElseThrow(() -> new NotFoundException("User not found with email : " + email));
@@ -152,7 +156,8 @@ public class AuthServiceImpl implements AuthService {
 	}
 
 	@Override
-	public APIResponse<?> resetPassword(String token, @Valid ResetPasswordDTO resetPassDto) {
+	@Transactional
+	public APIResponse<UserResponse> resetPassword(String token, @Valid ResetPasswordDTO resetPassDto) {
 		try {
 			if (!resetPassDto.isPasswordsMatched()) {
 				throw new BadRequestException("Passwords must be matched");
@@ -177,7 +182,8 @@ public class AuthServiceImpl implements AuthService {
 	}
 
 	@Override
-	public APIResponse<?> socialAuthenticate(@Valid SocialAuthenticateDTO authDto) {
+	@Transactional
+	public APIResponse<AuthResponse> socialAuthenticate(@Valid SocialAuthenticateDTO authDto) {
 		try {
 			Optional<User> checkUser = userRepo.findByEmail(authDto.getEmail());
 			User user = null;
@@ -203,7 +209,8 @@ public class AuthServiceImpl implements AuthService {
 	}
 
 	@Override
-	public APIResponse<?> addPassword(AddPasswordDTO addPassDto, String email) {
+	@Transactional
+	public APIResponse<UserResponse> addPassword(AddPasswordDTO addPassDto, String email) {
 		try {
 			if (!addPassDto.isPasswordsMatched()) {
 				throw new BadRequestException("Passwords are not matched");

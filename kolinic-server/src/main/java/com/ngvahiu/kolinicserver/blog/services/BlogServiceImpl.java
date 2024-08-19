@@ -1,11 +1,10 @@
 package com.ngvahiu.kolinicserver.blog.services;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.ngvahiu.kolinicserver.blog.dtos.BlogDTO;
@@ -23,6 +22,7 @@ import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class BlogServiceImpl implements BlogService {
 	private final BlogRepository blogRepo;
 	private final BlogTypeRepository blogTypeRepo;
@@ -30,6 +30,7 @@ public class BlogServiceImpl implements BlogService {
 	private final ModelMapper modelMapper;
 	
 	@Override
+	@Transactional
 	public APIResponse<?> createBlog(MultipartFile thumbnail,
 			@Valid CreateBlogDTO createBlogDto) {
 		try {
@@ -53,6 +54,7 @@ public class BlogServiceImpl implements BlogService {
 	}
 
 	@Override
+	@Transactional
 	public APIResponse<?> updateBlog(long id, MultipartFile thumbnail, @Valid UpdateBlogDTO updateBlogDto) {
 		try {
 			var blog = blogRepo.findById(id).orElseThrow(() -> new NotFoundException("Blog not found with id: " + id));

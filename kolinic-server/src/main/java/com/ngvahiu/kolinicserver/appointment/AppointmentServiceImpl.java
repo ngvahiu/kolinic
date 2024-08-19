@@ -23,9 +23,11 @@ import com.ngvahiu.kolinicserver.utils.APIResponse;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class AppointmentServiceImpl implements AppointmentService {
 	private final UserRepository userRepo;
 	private final DepartmentRepository departmentRepo;
@@ -34,6 +36,7 @@ public class AppointmentServiceImpl implements AppointmentService {
 	private final ModelMapper modelMapper;
 	
 	@Override
+	@Transactional
 	public APIResponse<?> createAppointment(String email, @Valid CreateAppointmentDTO createAppointmentDto) throws Exception {
 		try {
 			User user = userRepo.findByEmail(email).orElseThrow(() -> new NotFoundException("User email not found"));
